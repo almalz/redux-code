@@ -19,7 +19,6 @@ class StreamCreate extends Component {
     const classname = `field ${
       form.errors[field.name] && form.touched[field.name] ? 'error' : ''
     }`
-    console.log(classname)
 
     return (
       <div className={classname}>
@@ -27,16 +26,6 @@ class StreamCreate extends Component {
         <input {...field} type="text" />
       </div>
     )
-  }
-
-  renderError({ error, touched }) {
-    if (touched && error) {
-      return (
-        <div className="ui error message">
-          <div className="header">{error}</div>
-        </div>
-      )
-    }
   }
 
   render() {
